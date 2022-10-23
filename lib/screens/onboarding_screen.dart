@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:twitch_clone/screens/Login_screen.dart';
+import 'package:twitch_clone/screens/Signup_screen.dart';
 import 'package:twitch_clone/widgets/custom_button.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -27,11 +28,18 @@ class OnBoardingScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: CustomButton(
                 onTap: () {
-                  Navigator.pushNamed(context, LoginScreen.routeName);
+                  Navigator.pushNamed(context, LoginScreen.routName);
                 },
                 text: 'Log in'),
           ),
-          CustomButton(onTap: () {}, text: 'Sign up'),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: CustomButton(
+                onTap: () {
+                  Navigator.pushNamed(context, SignUpScreen.routName);
+                },
+                text: 'Sign Up'),
+          ),
         ]),
       ),
     );
